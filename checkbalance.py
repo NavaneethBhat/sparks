@@ -1,6 +1,7 @@
 import urllib2
 from BeautifulSoup import *
-request  = urllib2.Request("http://www.rcom.co.in/rcom/Netconnect/Netconnect_Authentication.jsp?MDN=7483099564")
+mdn = raw_input("Enter Your Reliance MDN!!")
+request  = urllib2.Request("http://www.rcom.co.in/rcom/Netconnect/Netconnect_Authentication.jsp?MDN=+"mdn)
 try:
 	response = urllib2.urlopen(request)
 	soup = BeautifulSoup(response)
